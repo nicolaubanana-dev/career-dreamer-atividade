@@ -4,17 +4,24 @@
  */
 const formulario = document.querySelector('#form-perfil');
 
+function lerLista(texto) {
+  return texto
+    .split(',')
+    .map((item) => item.trim())
+    .filter((item) => item !== '');
+}
+
 formulario.addEventListener('submit', (evento) => {
   evento.preventDefault();
 
   const campos = formulario.elements;
-  const nome = campos.nome.value;
-  const hobbies = campos.hobbies.value.split(',');
-  const interesses = campos.interesses.value.split(',');
+const nome = campos.nome.value.trim();
+const hobbies = lerLista(campos.hobbies.value);
+const interesses = lerLista(campos.interesses.value);
 
-  if (hobbies.length === 0 || interesses.length === 0) {
-    alert('Preencha os hobbies e interesses.');
-    return;
+ if (!nome || hobbies.length === 0 || interesses.length === 0) {
+  alert('Preencha nome, hobbies e interesses.');
+  return;
   }
 
   const perfil = {
