@@ -1,3 +1,5 @@
+tu cagou com o código, eu não devia ter substituido tudo. vou mandar a versão ANTES de ter essas modificaçoes ai.
+
 /**
  * Página do formulário (index.html).
  * Lê os dados do formulário e (futuramente) envia para a API.
@@ -27,9 +29,9 @@ formulario.addEventListener('submit', (evento) => {
   evento.preventDefault();
 
   const campos = formulario.elements;
-  const nome = campos.nome.value.trim();
-  const hobbies = lerLista(campos.hobbies.value);
-  const interesses = lerLista(campos.interesses.value);
+const nome = campos.nome.value.trim();
+const hobbies = lerLista(campos.hobbies.value);
+const interesses = lerLista(campos.interesses.value);
 
   definirErro(campos.nome, nome ? '' : 'Informe seu nome.');
   definirErro(campos.hobbies, hobbies.length ? '' : 'Informe pelo menos um hobby, separado por vírgula.');
