@@ -245,6 +245,18 @@ main {
   color: var(--cor-tinta-suave);
 }
 
+.erro {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--cor-erro);
+}
+
+.campo input[aria-invalid="true"],
+.campo textarea[aria-invalid="true"] {
+  border-color: var(--cor-erro);
+}
+
 /* Modal (elemento <dialog> nativo) */
 .modal {
   width: min(26rem, 100% - 2rem);
