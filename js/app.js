@@ -1,5 +1,3 @@
-tu cagou com o código, eu não devia ter substituido tudo. vou mandar a versão ANTES de ter essas modificaçoes ai.
-
 /**
  * Página do formulário (index.html).
  * Lê os dados do formulário e (futuramente) envia para a API.
