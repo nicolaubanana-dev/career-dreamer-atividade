@@ -107,3 +107,10 @@ formulario.addEventListener('input', (evento) => {
     definirErro(evento.target, '');
   }
 });
+
+if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  document.addEventListener('pointermove', (evento) => {
+    document.documentElement.style.setProperty('--mx', `${evento.clientX}px`);
+    document.documentElement.style.setProperty('--my', `${evento.clientY}px`);
+  });
+}
