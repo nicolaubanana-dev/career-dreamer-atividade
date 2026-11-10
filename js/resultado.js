@@ -93,3 +93,10 @@ if (dados && Array.isArray(dados.recommended_careers)) {
 } else {
   secaoSemResultado.hidden = false;
 }
+
+if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  document.addEventListener('pointermove', (evento) => {
+    document.documentElement.style.setProperty('--mx', `${evento.clientX}px`);
+    document.documentElement.style.setProperty('--my', `${evento.clientY}px`);
+  });
+}
